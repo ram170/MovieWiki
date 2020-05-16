@@ -1,0 +1,11 @@
+.topnav {
+    padding: 15px 15px;
+    text-align: center;
+    /* font-weight: 1000; */
+    padding-left: 10px;
+}
+
+.img {
+    height: 40px;
+    width: 60px;
+}
