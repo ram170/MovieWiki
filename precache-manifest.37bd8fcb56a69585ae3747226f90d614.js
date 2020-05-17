@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74a256605eec0bc9328933fec1cddefe",
+    "revision": "88c08ce51fc1632bb4d79847a1879377",
     "url": "/MovieWiki/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MovieWiki/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "bf83643ca91b9b016640",
+    "revision": "1946ac113f17897a606d",
     "url": "/MovieWiki/static/css/main.776fb2a9.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MovieWiki/static/js/2.6ea1de7c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bf83643ca91b9b016640",
-    "url": "/MovieWiki/static/js/main.f869b45c.chunk.js"
+    "revision": "1946ac113f17897a606d",
+    "url": "/MovieWiki/static/js/main.74ee064a.chunk.js"
   },
   {
     "revision": "8605a01badf524716a39",
