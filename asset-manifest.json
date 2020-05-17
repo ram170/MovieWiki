@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/MovieWiki/static/css/main.776fb2a9.chunk.css",
-    "main.js": "/MovieWiki/static/js/main.74ee064a.chunk.js",
-    "main.js.map": "/MovieWiki/static/js/main.74ee064a.chunk.js.map",
+    "main.css": "/MovieWiki/static/css/main.acc388c3.chunk.css",
+    "main.js": "/MovieWiki/static/js/main.801afa61.chunk.js",
+    "main.js.map": "/MovieWiki/static/js/main.801afa61.chunk.js.map",
     "runtime-main.js": "/MovieWiki/static/js/runtime-main.39508865.js",
     "runtime-main.js.map": "/MovieWiki/static/js/runtime-main.39508865.js.map",
     "static/css/2.af3c1da9.chunk.css": "/MovieWiki/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.6ea1de7c.chunk.js": "/MovieWiki/static/js/2.6ea1de7c.chunk.js",
-    "static/js/2.6ea1de7c.chunk.js.map": "/MovieWiki/static/js/2.6ea1de7c.chunk.js.map",
+    "static/js/2.60b7c65a.chunk.js": "/MovieWiki/static/js/2.60b7c65a.chunk.js",
+    "static/js/2.60b7c65a.chunk.js.map": "/MovieWiki/static/js/2.60b7c65a.chunk.js.map",
     "index.html": "/MovieWiki/index.html",
-    "precache-manifest.37bd8fcb56a69585ae3747226f90d614.js": "/MovieWiki/precache-manifest.37bd8fcb56a69585ae3747226f90d614.js",
+    "precache-manifest.cea776b28a9f80d65d22d9ab36974ac3.js": "/MovieWiki/precache-manifest.cea776b28a9f80d65d22d9ab36974ac3.js",
     "service-worker.js": "/MovieWiki/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/MovieWiki/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.776fb2a9.chunk.css.map": "/MovieWiki/static/css/main.776fb2a9.chunk.css.map",
-    "static/js/2.6ea1de7c.chunk.js.LICENSE.txt": "/MovieWiki/static/js/2.6ea1de7c.chunk.js.LICENSE.txt"
+    "static/css/main.acc388c3.chunk.css.map": "/MovieWiki/static/css/main.acc388c3.chunk.css.map",
+    "static/js/2.60b7c65a.chunk.js.LICENSE.txt": "/MovieWiki/static/js/2.60b7c65a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.39508865.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.6ea1de7c.chunk.js",
-    "static/css/main.776fb2a9.chunk.css",
-    "static/js/main.74ee064a.chunk.js"
+    "static/js/2.60b7c65a.chunk.js",
+    "static/css/main.acc388c3.chunk.css",
+    "static/js/main.801afa61.chunk.js"
   ]
 }
