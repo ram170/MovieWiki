@@ -11,7 +11,8 @@ export class App extends Component {
     title: '',
     doneLoading: true,
     error: '',
-    details: ''
+    details: '',
+    shadowCss: ''
   }
 
   onChange = (e) => {
@@ -30,7 +31,7 @@ export class App extends Component {
     };
     this.setState( { error: '' })
     let titleString = this.constructString();
-    axios.get('http://www.omdbapi.com/?apikey=3fbc69f5&t=' + titleString)
+    axios.get('https://www.omdbapi.com/?apikey=3fbc69f5&t=' + titleString)  // + '&plot=full' to get full plot
     .then((res) => {
       debugger;
       if (res.data.Response === 'False') {
@@ -49,15 +50,34 @@ export class App extends Component {
     return this.state.title === '';
   }
 
+  changeCss = (param) => {
+    if(param) {
+      this.setState( {shadowCss: 'shadow'} );
+    }
+    else {
+      this.setState( {shadowCss: ''} );
+    }
+    debugger
+  }
+
   constructString = () => {
     let stringArr = this.state.title.split(' ');
     let finalString = "";
     for (let i = 0; i < stringArr.length; i++) {
-      if(i !== stringArr.length-1) {
-        finalString = stringArr[i][0].toUpperCase() + stringArr[i].slice(1) + '+';
+      debugger
+      if(stringArr[i][0] !== undefined && isNaN(stringArr[i])) {
+        if(i !== stringArr.length-1) {
+          finalString += stringArr[i][0].toUpperCase() + stringArr[i].slice(1) + '+';
+        }
+        else {
+          finalString += stringArr[i][0].toUpperCase() + stringArr[i].slice(1);
+        }
       }
-      else {
-        finalString += stringArr[i][0].toUpperCase() + stringArr[i].slice(1);
+      else if(!isNaN(stringArr[i])) {
+        if(i !== stringArr.length-1)
+          finalString += stringArr[i] + '+';
+        else
+          finalString += stringArr[i];
       }
     }
     return finalString;
@@ -67,7 +87,7 @@ export class App extends Component {
     return (
       <div>
         <div className = "topnav">
-          <Banner></Banner>
+          <Banner changeCss = { this.changeCss }></Banner>
         </div>
         <center>{ this.state.doneLoading? null : <Spinner animation="grow" size="sm" />}</center>
         <div >
@@ -93,7 +113,7 @@ export class App extends Component {
         <br></br>
         <hr></hr>
         <br></br>
-        { this.state.details !== ''? <Details details = {this.state.details}></Details> : null }
+        { this.state.details !== ''? <Details details = {this.state.details} cssVal = {this.state.shadowCss}></Details> : null }
       </div>
     )
   }

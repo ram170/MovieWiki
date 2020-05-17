@@ -13,9 +13,9 @@ export class Details extends Component {
                 <br></br>
                 <div className = "container-fluid">
                     <div className = "row">
-                        <div className = 'poster col-md-2'><img className = "posterImage" src = {this.props.details.Poster}/></div>
+                        <div className = 'poster col-md-2 '><img className = {this.props.cssVal === ''? "posterImage": this.props.cssVal} src = {this.props.details.Poster}/></div>
                         <div className = 'content col-md-8'>
-                            <span className = "title"> {this.props.details.Title } </span>
+                            <span className = {this.props.cssVal === ''? "title": "editedTitle"}> {this.props.details.Title } </span>
                             {/* <span className = 'headings a'> IMDB </span> {this.props.details.Ratings[0].Value} */}
                             <br></br> <br></br>
                             <div className = "movie-details">
@@ -30,10 +30,10 @@ export class Details extends Component {
                             </div>
                         </div>
                         <div className = 'col-md-2'>
-                            <span className = "title"> Ratings </span>
+                            <span className ={this.props.cssVal === ''? "title": "editedTitle"}> Ratings </span>
                             <br></br> <br></br>
                             <div className = "movie-ratings">
-                                <span className = 'headings'>IMDB: </span> {this.props.details.Ratings[0].Value} <br></br>
+                                <span className = 'headings'>IMDB: </span> {this.imdb} <br></br>
                                 <span className = 'headings'>Rotten Tomatoes: </span> {this.rotten} <br></br>
                             </div>
                         </div>

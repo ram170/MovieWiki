@@ -9,3 +9,18 @@
     height: 40px;
     width: 60px;
 }
+
+.invertImg {
+    height: 40px;
+    width: 60px;
+    filter: invert(100%);
+}
+
+.grid-container-main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.mainText {
+    text-align: center;
+}
