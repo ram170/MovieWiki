@@ -25,3 +25,26 @@
   color: #fff;
   background: #333;
 }
+
+.grid-main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* grid-template-columns: auto auto; */
+  /* grid-auto-rows: auto; */
+  /* padding: 10px 10px; */
+  height: 70%;
+  width: 60%;
+  font-weight: bold;
+  font-size: x-large;
+  /* font-size: small; */
+
+  grid-gap: 40px;
+}
+
+@media (min-width: 1000px) {
+  .grid-main { grid-template-columns: repeat(4, 1fr); font-size: x-large;  height: 100%; width: 100%;}
+}
+
+@media (max-width: 300px) {
+  .grid-main { grid-template-columns: repeat(2, 1fr); font-size: x-large;}
+}

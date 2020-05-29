@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Details.css';
+// import GradeIcon from '@material-ui/icons/Grade';
 
 export class Details extends Component {
     ratings = () => {
@@ -10,10 +11,13 @@ export class Details extends Component {
         this.ratings();
         return (
             <div>
-                <br></br>
+                {/* <br></br> */}
                 <div className = "container-fluid">
                     <div className = "row">
-                        <div className = 'poster col-md-2 '><img className = {this.props.cssVal === ''? "posterImage": this.props.cssVal} src = {this.props.details.Poster}/></div>
+                        <div className = 'poster col-md-2 '>
+                            <img className = {this.props.cssVal === ''? "posterImage": this.props.cssVal} src = {this.props.details.Poster}/>
+                            <div><br></br></div>
+                        </div>
                         <div className = 'content col-md-8'>
                             <span className = {this.props.cssVal === ''? "title": "editedTitle"}> {this.props.details.Title } </span>
                             {/* <span className = 'headings a'> IMDB </span> {this.props.details.Ratings[0].Value} */}
@@ -28,9 +32,11 @@ export class Details extends Component {
                                 <span className = 'headings'>Type: </span> {this.props.details.Type} <br></br>
                                 <span className = 'headings'>Runtime: </span> {this.props.details.Runtime} <br></br>
                             </div>
+                            <br></br>
                         </div>
                         <div className = 'col-md-2'>
-                            <span className ={this.props.cssVal === ''? "title": "editedTitle"}> Ratings </span>
+                            {/* <GradeIcon fontSize = "large" className = 'rating'/> */}
+                            <span className ={this.props.cssVal === ''? "title": "editedTitle"}> Rating </span>
                             <br></br> <br></br>
                             <div className = "movie-ratings">
                                 <span className = 'headings'>IMDB: </span> {this.imdb} <br></br>

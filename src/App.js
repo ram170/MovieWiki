@@ -4,6 +4,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Banner from './components/banner/Banner';
 import Details from './components/details/Details';
+import Result from './components/Result/Result';
 import { Spinner } from 'react-bootstrap';
 
 export class App extends Component {
@@ -12,7 +13,9 @@ export class App extends Component {
     doneLoading: true,
     error: '',
     details: '',
-    shadowCss: ''
+    shadowCss: '',
+    options: [],
+    selected: false
   }
 
   onChange = (e) => {
@@ -31,7 +34,7 @@ export class App extends Component {
     };
     this.setState( { error: '' })
     let titleString = this.constructString();
-    axios.get('https://www.omdbapi.com/?apikey=3fbc69f5&t=' + titleString)  // + '&plot=full' to get full plot
+    // Your API key goes here
     .then((res) => {
       debugger;
       if (res.data.Response === 'False') {
@@ -39,7 +42,15 @@ export class App extends Component {
         this.setState({ doneLoading: true });
         return
       }
-      this.setState({details: res.data})
+      this.setState({ selected: false });
+      this.setState({ options: [] });
+      for(let i = 0; i < res.data.Search.length; i++) { 
+        let movie = this.restructureData(res.data.Search[i]);
+        if (movie.poster !== 'N/A') {
+          this.setState({ options: [...this.state.options, movie]});
+        }
+      }
+      // this.setState({details: res.data});
       this.setState({ doneLoading: true });
       debugger
     })
@@ -63,6 +74,9 @@ export class App extends Component {
   constructString = () => {
     let stringArr = this.state.title.split(' ');
     let finalString = "";
+    if (stringArr[stringArr.length-1] === "") {
+      stringArr.pop();
+    }
     for (let i = 0; i < stringArr.length; i++) {
       debugger
       if(stringArr[i][0] !== undefined && isNaN(stringArr[i])) {
@@ -81,6 +95,29 @@ export class App extends Component {
       }
     }
     return finalString;
+  }
+
+  restructureData = (data) => {
+      return {
+        name: data.Title,
+        poster: data.Poster
+      }
+  }
+
+  imgClick = (value) => {
+    this.setState({ details: ''})
+    this.setState({ selected: true });
+    this.setState({ options: [] });
+    debugger
+    let titleString = this.constructString();
+    // Your API key goes here
+    .then((res) => {
+      console.log(res);
+      this.setState({details: res.data});
+      this.setState({ doneLoading: true });
+      debugger
+    });
+    this.setState( { title: '' })
   }
 
   render() {
@@ -110,10 +147,19 @@ export class App extends Component {
           </div>
           <div></div>
         </div>
-        <br></br>
+        {/* <br></br> */}
         <hr></hr>
+        {/* <br></br> */}
+        <center>
+        <div className = "grid-main">
+        { !this.state.selected? 
+          <Result movies = {this.state.options.map(value => {return value.name})} posters = {this.state.options.map(value => {return value.poster})} imageClick = {this.imgClick}></Result> 
+        : null }
+        </div>
+        </center>
+        <center>{ this.state.details === '' && this.state.selected === true? <Spinner animation="border" size="sm" /> : ''}</center>
+        { this.state.details !== '' && this.state.selected? <Details details = {this.state.details} cssVal = {this.state.shadowCss}></Details> : null }
         <br></br>
-        { this.state.details !== ''? <Details details = {this.state.details} cssVal = {this.state.shadowCss}></Details> : null }
       </div>
     )
   }
