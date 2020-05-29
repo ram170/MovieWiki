@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MovieWiki/static/css/main.45adbd7e.chunk.css",
-    "main.js": "/MovieWiki/static/js/main.dea75440.chunk.js",
-    "main.js.map": "/MovieWiki/static/js/main.dea75440.chunk.js.map",
+    "main.js": "/MovieWiki/static/js/main.18f2e150.chunk.js",
+    "main.js.map": "/MovieWiki/static/js/main.18f2e150.chunk.js.map",
     "runtime-main.js": "/MovieWiki/static/js/runtime-main.39508865.js",
     "runtime-main.js.map": "/MovieWiki/static/js/runtime-main.39508865.js.map",
     "static/css/2.af3c1da9.chunk.css": "/MovieWiki/static/css/2.af3c1da9.chunk.css",
     "static/js/2.182f29ff.chunk.js": "/MovieWiki/static/js/2.182f29ff.chunk.js",
     "static/js/2.182f29ff.chunk.js.map": "/MovieWiki/static/js/2.182f29ff.chunk.js.map",
     "index.html": "/MovieWiki/index.html",
-    "precache-manifest.03f27ce6f6cba6dfdf9974367131195d.js": "/MovieWiki/precache-manifest.03f27ce6f6cba6dfdf9974367131195d.js",
+    "precache-manifest.c7b20e36ed3421c6250bfecb5a9ad43d.js": "/MovieWiki/precache-manifest.c7b20e36ed3421c6250bfecb5a9ad43d.js",
     "service-worker.js": "/MovieWiki/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/MovieWiki/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.45adbd7e.chunk.css.map": "/MovieWiki/static/css/main.45adbd7e.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.182f29ff.chunk.js",
     "static/css/main.45adbd7e.chunk.css",
-    "static/js/main.dea75440.chunk.js"
+    "static/js/main.18f2e150.chunk.js"
   ]
 }
